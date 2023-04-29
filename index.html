@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        center {
+            margin-bottom: 40px;
+        }
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+            margin-top: 50px;
+            transition: .5s ease;
+        }
+
+        .item {
+            width: 100%;
+            border: 1px solid #007FFF;
+            border-radius: 12px;
+            padding: 20px;
+            background-color: #F0F0F0;
+        }
+        .item .top {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item .top span {
+            font-size: 18px;
+            font-weight: 700;
+            color: black;
+        }
+
+        .item .top button {
+            all: unset;
+            border-radius: 100%;
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .item .time {
+            opacity: .7;
+        }
+
+        .remove_anim {
+            animation: remove 1s ease;
+        }
+
+        @keyframes remove {
+            form {
+                opacity: 1;
+                scale: 1;
+                rotate: 0deg;
+            }
+            to {
+                opacity: 0;
+                scale: 0.5;
+                rotate: 360deg;
+
+            }
+        }
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    <center>
+        <h1>Todo</h1>
+        <form name="todo">
+            <input type="text" name="task" >
+            <button>add</button>
+        </form>
+    </center>
+    <hr>
+
+    <div class="container">
+       
+    </div>
+
+
+
+    <div class="modal_bg">
+        <div class="modal">
+            <div class="close">x</div>
+            
+            <form name="edittodo">
+                <div class="box_">
+<h1>На какое что хотите поменять</h1>
+                <input name="task" class="inpp" id="inp" type="text">
+                <button class="yes">Изменить</button></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+
+.modal_bg {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    translate: -50%;
+    display: none;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.461);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: 0.7s ease;
+    opacity: 1;
+    animation-duration: 0.7s;
+    animation-name: modal;
+}
+
+.close {
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    cursor: pointer;
+    border: 0;
+    right: 40px;
+    top: 5px;
+}
+
+
+@keyframes modal {
+    from {
+        top: -600px;
+        opacity: 0;
+    }
+
+    to {
+        right: 0;
+        opacity: 1;
+    }
+}
+.box_{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+}
+
+
+.inpp{
+    width: 300px;
+    height: 40px;
+}
+.yes{
+    width: 100px;
+    height: 40px;
+    color: white;
+    border: 0;
+    background-color: blue;
+}
+h1{
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
